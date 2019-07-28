@@ -23,7 +23,7 @@
             <div class="auth-box">
                 <div class="card">
                     <div class="header">
-                        <p class="lead">Connectez-vous à votre come</p>
+                        <p class="lead">Connectez-vous à votre compte</p>
                     </div>
                     <div class="body">
                         <form class="form-auth-small" th:action="@{/login}" method="post">
@@ -35,7 +35,17 @@
                                 <label for="password" class="control-label sr-only">Mot de passe</label>
                                 <input type="password" class="form-control" id="password" name="password" value="" placeholder="Mot de passe">
                             </div>
+                            <div class="form-group clearfix">
+                                <label class="fancy-checkbox element-left">
+                                    <input type="checkbox">
+                                    <span>Se souvenir de moi</span>
+                                </label>
+                            </div>
                             <button type="submit" class="btn btn-primary btn-lg btn-block">LOGIN</button>
+                            <div class="bottom">
+                                <span class="helper-text m-b-10"><i class="fa fa-lock"></i> <a th:href="@{/page-forgot-password}">Mot de passe oublié ?</a></span>
+                                <span>Vous n'avez pas de compte ? <a th:href="@{/page-register}">Créer un Compte</a></span>
+                            </div>
                         </form>
                     </div>
                 </div>

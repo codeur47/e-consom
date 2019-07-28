@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/color_skins.css">
+</head>
+<body class="theme-cyan">
+<!-- WRAPPER -->
+<div id="wrapper">
+    <div class="vertical-align-wrap">
+        <div class="vertical-align-middle auth-main">
+            <div class="auth-box">
+                <div class="card">
+                    <div class="header">
+                        <p class="lead">Créer un compte</p>
+                    </div>
+                    <div class="body">
+                        <form class="form-auth-small" method="post" th:action="@{/page-register}">
+                            <div class="form-group">
+                                <label for="nom" class="control-label sr-only">Nom</label>
+                                <input type="text" class="form-control" placeholder="Nom" th:value="${user.nom}" id="nom" name="nom" roleId="nom" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="prenom" class="control-label sr-only">Prenom(s)</label>
+                                <input type="text" class="form-control"  placeholder="Prenom(s)" th:value="${user.prenom}" id="prenom" name="prenom" roleId="prenom" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="username" class="control-label sr-only">Nom Utilisateur</label>
+                                <input type="text" class="form-control" placeholder="Nom Utilisateur" th:value="${user.username}" id="username" name="username" roleId="username" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="control-label sr-only">Email</label>
+                                <input type="email" class="form-control" placeholder="Email" th:value="${user.email}" id="email" name="email" roleId="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="control-label sr-only">Mot de passe</label>
+                                <input type="password" class="form-control"  placeholder="Mot de passe" th:value="${user.password}" id="password" name="password" roleId="password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">ENREGISTRER</button>
+                            <div class="bottom">
+                                <span class="helper-text">Avez vous déjà un compte ? <a th:href="@{/login}">Connectez-vous</a></span>
+                            </div>
+                        </form>
+                        <div class="separator-linethrough"><span>OU</span></div>
+                        <button class="btn btn-signin-social"><i class="fa fa-facebook-official facebook-color"></i> Enregistrez-vous avec Facebook</button>
+                        <button class="btn btn-signin-social"><i class="fa fa-twitter twitter-color"></i> Enregistrez-vous avec Twitter</button>
+                        <button class="btn btn-signin-social"><i class="fa fa-google google-color"></i> Enregistrez-vous avec Google</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END WRAPPER -->
+</body>
+</html>
