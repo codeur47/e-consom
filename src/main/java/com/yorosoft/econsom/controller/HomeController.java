@@ -50,6 +50,13 @@ public class HomeController {
         return view;
     }
 
+    @GetMapping("/page-lockscreen")
+    public ModelAndView lockscreenPage(){
+        ModelAndView view = new ModelAndView();
+        view.setViewName("page-lockscreen");
+        return view;
+    }
+
     @GetMapping("/page-register")
     public String registerPage(Model model){
         User user = new User();
@@ -71,6 +78,7 @@ public class HomeController {
             Set<UserRole> userRoles = new HashSet<>();
             userRoles.add(new UserRole(user, roleDao.findByName("USER")));
             userService.createUser(user, userRoles);
+            model.addAttribute("userCreated", true);
             return "redirect:/";
         }
     }

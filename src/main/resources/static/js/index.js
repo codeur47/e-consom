@@ -48,8 +48,8 @@ $(function() {
     // notification popup
     toastr.options.closeButton = true;
     toastr.options.positionClass = 'toast-top-right';
-    toastr.options.showDuration = 1000;
-    toastr['info']('Hello, welcome to Lucid, a unique admin Template.');
+    toastr.options.showDuration = 2500;
+    toastr['info']('Bienvenue sur E-Budget !');
 
 });
 

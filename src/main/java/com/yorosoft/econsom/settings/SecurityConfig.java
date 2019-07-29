@@ -43,6 +43,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private static final String[] SECURE_URLS = {
             "/dashboard/**",
+            "/page-lockscreen/**",
             "/addUser/**",
             "/userList/**",
             "/addEmployee/**",
