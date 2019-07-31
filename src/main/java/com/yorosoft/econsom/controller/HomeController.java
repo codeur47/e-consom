@@ -79,7 +79,7 @@ public class HomeController {
             userRoles.add(new UserRole(user, roleDao.findByName("USER")));
             userService.createUser(user, userRoles);
             model.addAttribute("userCreated", true);
-            return "redirect:/";
+            return "page-register";
         }
     }
 

@@ -34,12 +34,6 @@
     <div class="vertical-align-wrap">
         <div class="vertical-align-middle auth-main">
             <div class="auth-box">
-                <div id="toast-container" class="toast-top-right" th:if="${userCreated}">
-                    <div class="toast toast-info" aria-live="polite" style="" id="letoast">
-                        <button type="button" class="toast-close-button" role="button">×</button>
-                        <div class="toast-message">This is general theme info</div>
-                    </div>
-                </div>
                 <div class="card">
                     <div class="header">
                         <p class="lead">Connectez-vous à votre compte</p>
@@ -81,15 +75,5 @@
 <script src="vendor/toastr/toastr.js"></script>
 
 <script src="bundles/mainscripts.bundle.js"></script>
-<script>
-    $( document ).ready(function() {
-        setTimeout(function(){
-            $("#letoast").addClass("animate bounceOut");
-        }, 3000);
-        setTimeout(function(){
-            $("#letoast").hide();
-        }, 3500);
-    });
-</script>
 </body>
 </html>

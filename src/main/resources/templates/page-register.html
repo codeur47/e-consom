@@ -14,12 +14,31 @@
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/color_skins.css">
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="vendor/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css">
+    <link rel="stylesheet" href="vendor/chartist/css/chartist.min.css">
+    <link rel="stylesheet" href="vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.css">
+    <link rel="stylesheet" href="vendor/toastr/toastr.min.css">
+    <link rel="stylesheet" href="vendor/toastr/toastr.min.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animate.css">
 </head>
 <body class="theme-cyan">
 <!-- WRAPPER -->
 <div id="wrapper">
     <div class="vertical-align-wrap">
         <div class="vertical-align-middle auth-main">
+            <div id="toast-container" class="toast-top-right" th:if="${userCreated}">
+                <div class="toast toast-info" aria-live="polite" style="" id="userCreatedToast">
+                    <button type="button" class="toast-close-button" role="button">×</button>
+                    <div class="toast-message">This is general theme info</div>
+                </div>
+            </div>
             <div class="auth-box">
                 <div class="card">
                     <div class="header">
@@ -63,5 +82,24 @@
     </div>
 </div>
 <!-- END WRAPPER -->
+<!-- END WRAPPER -->
+<script src="bundles/libscripts.bundle.js"></script>
+<script src="bundles/vendorscripts.bundle.js"></script>
+
+<script src="bundles/chartist.bundle.js"></script>
+<script src="bundles/knob.bundle.js"></script> <!-- Jquery Knob-->
+<script src="vendor/toastr/toastr.js"></script>
+
+<script src="bundles/mainscripts.bundle.js"></script>
+<script>
+    $( document ).ready(function() {
+        setTimeout(function(){
+            $("#userCreatedToast").addClass("animate bounceOut");
+        }, 5000);
+        setTimeout(function(){
+            $("#userCreatedToast").hide();
+        }, 5500);
+    });
+</script>
 </body>
 </html>
